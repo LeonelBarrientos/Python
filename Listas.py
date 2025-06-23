@@ -1,24 +1,42 @@
-# Crea una lista con 5 números y muestra el mayor.
 
-# Agrega un elemento al final de una lista.
+#Creando lista con list()
+lista = list(["hola","leo",10,9,34])
 
-# Elimina el primer número par de una lista.
+#Devuelve la cantidad de elementos de la lista
+cantidad_elementos = len(lista)
 
-# Invierte una lista sin usar [::-1].
+#Agregando un elemento a la lista
+lista.append("JAJA")
 
-lista = [1,2,3,4,5]
-print(lista)
-mayor = max(lista)
-print(f"el numero mayor es: {mayor}")
-elemento_final = input("ingrese el elemento a agregar")
-lista.append(elemento_final)
-print(lista)
-for numero in lista:
-    if numero % 2==0:
-        lista.remove(numero)
-        break
-print(lista)
+agregando_con_append = lista.append("JAJA") #Esto no esta mal pero no es necesario darle el valor porque no es tan impresindible pero es lo mismo de arriba
+
+#Agregando un elemento a la lista en un indice especifico
+lista.insert(2,"Que sucede")
+
+#Agregando varios elementos a la lista, aqui para agregar los elementos es necesario pasarlos con los corchetes
+lista.extend([False,2030])
+
+#Elimando un elemento de la lista (por su indice)
+lista.pop(-1) # -1 para eliminar el ultimo, -2 par eliminar el anteultimo, y asi sucesivamente
+
+
+#Removiendo un elemento de la lista por su valor
+lista.remove("hola")
+
+#Ordenando la lista de forma ascendente (si usamos el parametro reverse=True lo ordena en reversa) (solo funciona con numeros)
+lista.sort()
+
+#Invirtiendo los elementos de una lista
 lista.reverse()
+
+#Verificando si un elemento se encuentra en la lista
+elemento_encontrado = lista.index(10)
+
+#Elimina todos los elementos de una lista
+lista.clear()
+
+
+
+
+
 print(lista)
-
-
