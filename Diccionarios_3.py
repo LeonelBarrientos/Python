@@ -6,40 +6,40 @@ estudiante = {
     }
 
 
-def mostrarDatos():
-    for clave,valor in estudiante.items():
-        print(f"{clave}: {valor}")
+def mostrarDatos(): #Creo def mostrarDatos para la opcion 1
+    for clave,valor in estudiante.items(): #Le digo al bucle que recorra la clave y su valor en el diccionario y usamos el .items() para que devuelva tanto la clave como el valor
+        print(f"{clave}: {valor}") #Lo mostramos por pantalla
 
-def modificar():
-     clave_a_modificar = input("Ingrese la clave que quiere modificar: ")
-     if clave_a_modificar in estudiante:
-          nuevo_valor = input(f"Ingresa un nuevo valor para {clave_a_modificar}")
-          estudiante[clave_a_modificar] = nuevo_valor
-          print(f"La {clave_a_modificar} fue actualizada con exito.")
-     else:
-          print("La clave que ingresaste no está en el diccionario")
-def agregarDato():
-      nueva_clave = input("Ingrese la nueva clave que quiere agregar: ")
-      if nueva_clave in estudiante:
-           print("La clave ya existe")
-      else:
-           nuevo_valor = input(f"Ingrese el nuevo valor para {nueva_clave}")
-           estudiante[nueva_clave] = nuevo_valor
-           print(f"{nueva_clave} fue agregada correctamente")
+def modificar(): #Creo def Modificar para la opcion 2
+     clave_a_modificar = input("Ingrese la clave que quiere modificar: ") #Pedimos por pantalla que ingrese una clave que ya este en el diccionario
+     if clave_a_modificar in estudiante: #Si la clave se encuentra en el diccionario pasamos a pedirle el valor
+          nuevo_valor = input(f"Ingresa un nuevo valor para {clave_a_modificar}") #Pedimos el nuevo valor que se le asignara a la clave ya existente
+          estudiante[clave_a_modificar] = nuevo_valor #Decimos en el diccionario si esta la clave que ingreso se le asigna el nuevo valor
+          print(f"La {clave_a_modificar} fue actualizada con exito.") #Mostramos por pantalla mensaje de exito
+     else: #Sino mostramos un mensaje de que la clave ingresada no se encuentra en nuestro diccionario
+          print("La clave que ingresaste no está en el diccionario") #Mostramos por pantalla
+def agregarDato(): #Creo def agregarDato para la opción 3
+      nueva_clave = input("Ingrese la nueva clave que quiere agregar: ") #Pedimos por pantalla que ingrese una nueva clave para el diccionario
+      if nueva_clave in estudiante: #Decimos, si la nueva clave se encuentra en nuestro diccionario, mostraremos un mensaje de que ya existe
+           print("La clave ya existe") #Mostramos mensaje por pantalla
+      else: #Si el valor que ingresamos no está en el diccionario pasaremos a pedirle el valor que se le asignará
+           nuevo_valor = input(f"Ingrese el nuevo valor para {nueva_clave}") #Pedimos el valor
+           estudiante[nueva_clave] = nuevo_valor #Decimos, al diccionario se le agrega una nueva clave y a la clave el nuevo valor
+           print(f"{nueva_clave} fue agregada correctamente") #Mostramos mensaje de exito
            
 
 
-def  eliminarDato():
-      dato_a_eliminar = input("Ingrese la clave que quiere elimnar: ")
-      if dato_a_eliminar in estudiante:
-           del estudiante[dato_a_eliminar]
-           print(f"{dato_a_eliminar} fue eliminda exitosamente")
-      else:
-           print("Esa clave no existe.")
+def  eliminarDato(): #Crear def eliminar un dato para la opción 4
+      dato_a_eliminar = input("Ingrese la clave que quiere elimnar: ") #Solicitamos que ingrese una clave para eliminar (Tiene que existir en el diccionario)
+      if dato_a_eliminar in estudiante: #Si la clave a eliminar se encuentra en el diccionario pasamos a eliminarla
+           del estudiante[dato_a_eliminar] #Eliminamos la clave con del
+           print(f"{dato_a_eliminar} fue eliminada exitosamente") #Mostramos por pantalla mensaje de exito
+      else: #Si la clave que ingresamos para eliminar no se encuentra en el diccionario, mostraremos por pantalla un mensaje de que no existe
+           print("Esa clave no existe.") #Mostramos mensaje por pantalla
      
      
 
-          
+#Creamos nuestro menu con sus respectivas opciones y el llamado a los def.
 while True:
     try: 
         print("""       ***Mini Menu***
