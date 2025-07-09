@@ -1,1 +1,1 @@
-# Python
+# ejercicios resueltos para examen.
